@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NeoMem2.Gui.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ImportConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\wc\NeoMem2\Notes.csv</Value>
+    </Setting>
+    <Setting Name="MainConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=.;database=NeoMem2;trusted_connection=true</Value>
+    </Setting>
+    <Setting Name="StoreType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NeoMem2.Data.SqlServer.SqlServerStore</Value>
+    </Setting>
+    <Setting Name="NoteColumns" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Score,LastModifiedDate,Class,Name,Tags,TextFormat,[all custom]</Value>
+    </Setting>
+    <Setting Name="ClassNoteTreeModelSorted" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ClassNoteTreeModelGroupChildren" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MaxChildNodesForAutoExpand" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="NoteFormDefaultPropertiesLocation" Type="System.Windows.Forms.DockStyle" Scope="User">
+      <Value Profile="(Default)">Right</Value>
+    </Setting>
+    <Setting Name="NoteFormDefaultLinksLocation" Type="System.Windows.Forms.DockStyle" Scope="User">
+      <Value Profile="(Default)">Bottom</Value>
+    </Setting>
+    <Setting Name="MatcherType" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TreeModelType" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="NoteModelType" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SelectTopSearchMatch" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TemplateVisibility" Type="NeoMem2.Gui.Core.TemplateVisibilityType" Scope="User">
+      <Value Profile="(Default)">WhenOnlyTemplates</Value>
+    </Setting>
+    <Setting Name="ExportConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RefreshOnNewNote" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HtmlExportClassesToExclude" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ARQ,Email,Employee,Journal</Value>
+    </Setting>
+    <Setting Name="StructuredNoteNameDelimiter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

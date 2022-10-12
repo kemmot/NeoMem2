@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCCED191-BF67-4CEB-B4E5-E0C5BDA395A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeoMem2.Utils</RootNamespace>
+    <AssemblyName>NeoMem2.Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog">
+      <HintPath>..\ThirdParty\NLog\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\NeoMem2AssemblyInfo.cs">
+      <Link>Properties\NeoMem2AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ComponentModel\ChangeTrackedBase.cs" />
+    <Compile Include="Collections\Generic\ObservableStack.cs" />
+    <Compile Include="Collections\Generic\TreeNode.cs" />
+    <Compile Include="ComponentModel\Generic\TrackedProperty.cs" />
+    <Compile Include="ComponentModel\TrackedProperty.cs" />
+    <Compile Include="ComponentModel\TrackedPropertyHolder.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="Diagnostics\StatisticsItem.cs" />
+    <Compile Include="Math2.cs" />
+    <Compile Include="Threading\InterlockedInt64.cs" />
+    <Compile Include="Diagnostics\Statistics.cs" />
+    <Compile Include="DisposableBase.cs" />
+    <Compile Include="EnumWrapper.cs" />
+    <Compile Include="GcMonitor.cs" />
+    <Compile Include="GcMonitorEventArgs.cs" />
+    <Compile Include="GcMonitorGenerationDetails.cs" />
+    <Compile Include="ICloneable.cs" />
+    <Compile Include="IO\DataSize.cs" />
+    <Compile Include="IO\DataSizeConvert.cs" />
+    <Compile Include="IO\DataSizeFormat.cs" />
+    <Compile Include="IO\DataSizeUnit.cs" />
+    <Compile Include="ItemCompleteEventArgs.cs" />
+    <Compile Include="ItemEventArgs.cs" />
+    <Compile Include="NLogExtensions.cs" />
+    <Compile Include="ComponentModel\NotifyPropertyChangedBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Text\StringBuilderExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

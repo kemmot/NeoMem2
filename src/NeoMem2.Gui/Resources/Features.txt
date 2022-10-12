@@ -1,0 +1,66 @@
+﻿Note Editing
+------------
+Supports external editors.
+
+Note Management
+---------------
+Add new notes.
+Delete notes.
+Add custom note properties.
+Delete custom note properties.
+Batch add, remove and set tags.
+Add links to files in the file system.
+
+Organisation & Navigation
+-------------------------
+List all notes.
+Favorite notes list (implemented as pinned notes).
+Pinned notes sort to top.
+Categorised, filterable treeviews.
+Tag group category view.
+Initial letter treeview category view.
+Last edit date treeview category view (today, yesterday, last week, etc).
+Heirarchical tag groups treeview category view.
+Right click note -> open in new window.
+Added open note list to Window menu.
+Ability to view more than one note at the same time (used MDI model).
+Keyboard shortbut to jump to find text box.
+Keyboard shortbut to create new note.
+Ability to navigate backward and forward through previously viewed notes.
+Matching search text should be highlighted in the currently displayed note.
+Linked notes.
+
+Searching
+---------
+Regex searching.
+When searching display all matching notes by default unless a category is already selected.
+Full text search.
+Query search language (field1=value1;field2=value2 where fields are: tags, name, text, all or any custom field).
+Powershell search (press enter to search, note being searched is stored in the $note variable).
+
+Repository
+----------
+Import from nvpy format.
+Import from neomem csv export format.
+Change to use a RDBMS for storage.
+SQL Server store can now save a backup from within the application.
+Can now create new stores.
+SQL Server database is auto upgraded when the store is opened.
+
+Automation
+----------
+Hosts the powershell runtime for automation.
+Added ability to run a script when the main form loads.
+Added ability to run a script when a note form loads.
+Added ability to run a script when a new note is created.
+Added script editor.
+Added ability to run custom scripts.
+Added sample 'insert journal' script.
+Added script to insert a text based underlining.
+Added rich text box helper for easier scripting.
+Added script to insert a text based double underlining.
+
+Misc
+----
+Accept tabs in edit window.
+Word wrap toggle for text fields (through editor options menu).

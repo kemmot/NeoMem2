@@ -1,0 +1,74 @@
+﻿Version 1.6.0.0 ()
+----------------------------
+Now supports syntax highlighting of common source code formats.
+File import now updates existing files.
+Now supports external editors.
+
+Version 1.5.0.1 (2016-09-07)
+----------------------------
+File notes are now listed by filename (i.e. no path information).
+
+Version 1.5.0.0 (2016-09-07)
+----------------------------
+Added support for file based notes (the note content is stored in the file system).
+
+Version 1.4.0.0
+---------------
+Now stores a history of note changes.
+
+Version 1.3.0.0
+---------------
+
+Version 1.2.0.0
+---------------
+Tags moved to discrete fields.
+
+Version 1.1.0.0
+---------------
+Deleted notes are now only marked as deleted to allow for future recovery.
+
+Version 1.0.0.0
+---------------
+
+Version 0.9.0.0
+---------------
+Now supports different note text formats: plain text, rich text and markdown.
+
+Version 0.8.0.0
+---------------
+Now supports different classes of notes.  Class templates as stored in different namespace.
+
+Version 0.7.0.0
+---------------
+Notes can now have a namespace associated with them.
+Namespaces added: note, template.
+Templates are now identified using namespaces.
+
+Version 0.6.0.0
+---------------
+Now supports links to external files.
+
+Version 0.5.0.0
+---------------
+Now supports links between notes.
+
+Version 0.4.0.0
+---------------
+Now supoprts note templates.
+
+Version 0.3.0.0
+---------------
+Now supports note properties.
+
+Version 0.2.0.0
+---------------
+Initial release supporting simple unorganised plain text notes.
+
+Older
+-----
+#1: Will now look for scripts in the scripts subfolder of the application folder rather than the current path to prevent errors when starting with a different working folder.
+#2: Close button of About box is now anchored.
+#3: Fixed bug preventing '[all]' from being used as a field name in query matcher.
+4#: Matching search text should be highlighted in the currently displayed note.
+5#: Flat tags category nodes now display the number of notes in the category.
+6#: Added category filter.

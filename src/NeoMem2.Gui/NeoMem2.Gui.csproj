@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14C9B81C-4366-4193-A758-8CEAB07A7E44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeoMem2.Gui</RootNamespace>
+    <AssemblyName>NeoMem2.Gui</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ApplicationIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fireball.CodeEditor">
+      <HintPath>..\ThirdParty\Fireball\Fireball.CodeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.CodeEditor.SyntaxFiles">
+      <HintPath>..\ThirdParty\Fireball\Fireball.CodeEditor.SyntaxFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.SyntaxDocument">
+      <HintPath>..\ThirdParty\Fireball\Fireball.SyntaxDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Windows.Forms">
+      <HintPath>..\ThirdParty\Fireball\Fireball.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Markdig">
+      <HintPath>..\packages\Markdig.0.10.4\lib\net40\Markdig.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\NLog\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\NeoMem2AssemblyInfo.cs">
+      <Link>Properties\NeoMem2AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchChangeForm.Designer.cs">
+      <DependentUpon>BatchChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\ClearSearchCommand.cs" />
+    <Compile Include="Commands\INotesCommand.cs" />
+    <Compile Include="Commands\MultiCommandHandler.cs" />
+    <Compile Include="Commands\NewNoteWindowCommand.cs" />
+    <Compile Include="Commands\NoteNewLinkedCommand.cs" />
+    <Compile Include="Commands\NoteOpenInNewWindowCommand.cs" />
+    <Compile Include="Commands\NotesCommand.cs" />
+    <Compile Include="Commands\OpenFileNoteCommand.cs" />
+    <Compile Include="Commands\ShowAboutCommand.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\FileBackupCommand.cs" />
+    <Compile Include="Commands\FileImportCommand.cs" />
+    <Compile Include="Commands\FileNewCommand.cs" />
+    <Compile Include="Commands\FileOpenCommand.cs" />
+    <Compile Include="Commands\NoteDeleteCommand.cs" />
+    <Compile Include="Commands\NoteFindCommand.cs" />
+    <Compile Include="Commands\NoteNewCommand.cs" />
+    <Compile Include="Commands\RefreshCommand.cs" />
+    <Compile Include="Commands\ShowBatchChangeCommand.cs" />
+    <Compile Include="Commands\ShowNoteListCommand.cs" />
+    <Compile Include="Commands\ShowOptionsCommand.cs" />
+    <Compile Include="Commands\ShowScriptEditorCommand.cs" />
+    <Compile Include="Commands\SingleNoteCommand.cs" />
+    <Compile Include="Commands\WindowsCascadeCommand.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\CommandManager.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\WindowsTileHorizontalCommand.cs" />
+    <Compile Include="Commands\WindowsTileVerticalCommand.cs" />
+    <Compile Include="CleanNotesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CleanNotesForm.Designer.cs">
+      <DependentUpon>CleanNotesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileImportVerifier.cs" />
+    <Compile Include="ImportFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportFilesForm.Designer.cs">
+      <DependentUpon>ImportFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalViewerForm.Designer.cs">
+      <DependentUpon>InternalViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewSorter.cs" />
+    <Compile Include="Models\CategoryTreeModel.cs" />
+    <Compile Include="DragEventArgsExtensions.cs" />
+    <Compile Include="Models\ClassNoteTreeModel.cs" />
+    <Compile Include="Models\FlatNoteTreeModel.cs" />
+    <Compile Include="Models\ICategoryModel.cs" />
+    <Compile Include="Models\InitialsTreeModel.cs" />
+    <Compile Include="Models\INoteViewModel.cs" />
+    <Compile Include="Models\LastModifiedTreeModel.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FolderTagsTreeModel.cs" />
+    <Compile Include="Models\MultiCategoryTreeModel.cs" />
+    <Compile Include="Models\MultiSelectActionType.cs" />
+    <Compile Include="Models\Navigator.cs" />
+    <Compile Include="Models\NoteListModel.cs" />
+    <Compile Include="Models\NoteModelFactory.cs" />
+    <Compile Include="Models\NoteModelType.cs" />
+    <Compile Include="Models\NoteTreeModelBase.cs" />
+    <Compile Include="Models\PropertyValueTreeModel.cs" />
+    <Compile Include="Models\StructuredNoteTreeModel.cs" />
+    <Compile Include="NewPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPropertyForm.Designer.cs">
+      <DependentUpon>NewPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoteForm.Designer.cs">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FlatTagsTreeModel.cs" />
+    <Compile Include="NoteHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoteHistoryForm.Designer.cs">
+      <DependentUpon>NoteHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenForm.Designer.cs">
+      <DependentUpon>OpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoteCategoryTreeNode.cs" />
+    <Compile Include="Models\TreeModelBase.cs" />
+    <Compile Include="Models\CategoryModelFactory.cs" />
+    <Compile Include="Models\CategoryModelType.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="NoteTreeNode.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings2.cs" />
+    <Compile Include="PropertyBag.cs" />
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptEditorForm.Designer.cs">
+      <DependentUpon>ScriptEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrlNavigator.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchChangeForm.resx">
+      <DependentUpon>BatchChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CleanNotesForm.resx">
+      <DependentUpon>CleanNotesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportFilesForm.resx">
+      <DependentUpon>ImportFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPropertyForm.resx">
+      <DependentUpon>NewPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteForm.resx">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteHistoryForm.resx">
+      <DependentUpon>NoteHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenForm.resx">
+      <DependentUpon>OpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScriptEditorForm.resx">
+      <DependentUpon>ScriptEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="appDebug.config" />
+    <None Include="appRelease.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\InsertBaseDataDefinitionMarkdownTable.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\InsertJournalLine.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\InsertTextDoubleUnderline.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\InsertTextUnderline.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\MainFormLoad.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\MarkdownBulletSelectedText.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\MarkdownInsertTable.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\MarkdownNumberSelectedText.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\NewNoteCreated.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\NoteFormLoad.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NeoMem2.Automation.Updates\NeoMem2.Automation.Updates.csproj">
+      <Project>{9899fc8d-5c2c-44e9-9862-7a630a7160e5}</Project>
+      <Name>NeoMem2.Automation.Updates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoMem2.Core\NeoMem2.Core.csproj">
+      <Project>{EC5D3F9C-5D38-4E71-891A-281010C9AA5A}</Project>
+      <Name>NeoMem2.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoMem2.Data.Nvpy\NeoMem2.Data.Nvpy.csproj">
+      <Project>{59d84c5a-e451-4ab4-b8b7-14d196b3fe56}</Project>
+      <Name>NeoMem2.Data.Nvpy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoMem2.Data.Sqlite\NeoMem2.Data.Sqlite.csproj">
+      <Project>{6bbd5bef-09b1-42aa-a02d-d64543acfc75}</Project>
+      <Name>NeoMem2.Data.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoMem2.Gui.Core\NeoMem2.Gui.Core.csproj">
+      <Project>{64eec6ba-79c6-41b3-a130-1044a6eab9ef}</Project>
+      <Name>NeoMem2.Gui.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoMem2.Store.SqlServer\NeoMem2.Data.SqlServer.csproj">
+      <Project>{688d374f-4fe1-43bb-8e9e-8e984be67a77}</Project>
+      <Name>NeoMem2.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeoMem2.Utils\NeoMem2.Utils.csproj">
+      <Project>{bcced191-bf67-4ceb-b4e5-e0c5bda395a6}</Project>
+      <Name>NeoMem2.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\About.txt" />
+    <Content Include="Resources\ApplicationIcon.ico" />
+    <EmbeddedResource Include="Resources\Features.txt" />
+    <EmbeddedResource Include="Resources\ReleaseNotes.txt" />
+    <EmbeddedResource Include="Resources\Roadmap.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)"=="Debug" goto :debug
+if "$(ConfigurationName)"=="Release" goto :debug
+
+:debug
+del "$(TargetPath).config"
+copy "$(ProjectDir)appDebug.config" "$(TargetPath).config"
+goto :end
+
+:release
+if $(ConfigurationName) == Debug xcopy $(ProjectDir)appDebug.config $(TargetPath).config
+del "$(TargetPath).config"
+copy "$(ProjectDir)appRelease.config" "$(TargetPath).config"
+goto :end
+
+:end</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,88 @@
+﻿Note Editing
+------------
+Support todo list notes.
+Support freeform page layouts.
+Ability for a note to have multiple pages.
+Text editing undo.
+Note operation undo.
+RTF formatting:
+	Bold.
+	Italic.
+	Underline.
+	Strikethrough.
+	Background colour.
+	Foreground colour.
+	Bullets.
+	Font style.
+	Font size.
+Support following note field types:
+	Text.
+	Date time.
+	Hyperlink.
+	plain text.
+	RTF.
+	Note link.
+	Source code with syntax highlighting.
+Support for word tables.
+Support for embedded images.
+Hyperlinks.
+Attachments.
+Note templates should include RTF template.
+Copying/cloning notes.
+Mark notes as deleted and recover later (i.e. recycle bin).
+
+Organisation & Navigation
+-------------------------
+Ensure that after searching, if the currently displayed note is not in the result set then the first search result is displayed.
+Moving notes.
+Note icons.
+Last view date treeview category view (today, yesterday, last week, etc).
+Pressing down arrow from search bar should move into list of notes.
+Pressing up arrow at top of list of notes should move to search bar.
+Ability to focus the treeview on a specified note as the node.
+
+Printing
+--------
+Ability to print a note.
+Ability to print a note and its children.
+Ability to print a collection of notes.
+
+Repository
+----------
+Support multiple users in a single database.
+Support some form of sharing and/or synchronization.
+Ability to work from a database or a file, maybe SQL Server LocalDb can support local files so only the connection string would differ.
+Ability to restore a backup from within the application.
+Recycle bin for deleted notes.
+Recently opened note repository list.
+Support multiple note repositories open at the same time.
+Support moving notes between repositories.
+Support copying notes between repositories.
+Export note to text file.
+Export a note and its children.
+Import a note into a specific location.
+Import a database.
+Export database to XML.
+Ability to create a new empty database/repository.
+Support a repository with notes stored in XML files.
+
+Searching
+---------
+Support search query language.
+Stored searches.
+History of previous searches.
+
+Automation
+----------
+Override the search box to provide quick macro execution (i.e. prefix with '>' character to identify a command rather than a search or have a different search provider).
+
+Miscellaneous
+-------------
+Global hotkey for activating application.
+Global hotkey for adding a new note.
+Global hotkey for opening a scratchpad note.
+Minimise to system tray.
+Minimise by hitting ESC key.
+Send note via email.
+Ability to format a note name in a list - background/foreground colour.
+Portable or installed version.
