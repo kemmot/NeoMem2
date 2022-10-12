@@ -46,7 +46,6 @@ namespace NeoMem2.Gui
 
         private const string IsExternalEditorText = "Is External Editor";
         private const string IsNotExternalEditorText = "Is Not External Editor";
-        private const string ExternalEditorTempFile = @"D:\temp\neoMem2ExternalNote.md";
 
         public event EventHandler<ItemEventArgs<Note>> CurrentNoteChanged;
 
@@ -357,8 +356,8 @@ namespace NeoMem2.Gui
         private void RefreshExternalEditor(bool useExternalEditor)
         {
             m_Helper.SetReadOnly(useExternalEditor);
-            File.WriteAllText(ExternalEditorTempFile, Helper.GetEditorText());
-            m_ExternalEditorLastWriteTime = File.GetLastWriteTimeUtc(ExternalEditorTempFile);
+            File.WriteAllText(Properties.Settings.Default.ExternalEditorTempFile, Helper.GetEditorText());
+            m_ExternalEditorLastWriteTime = File.GetLastWriteTimeUtc(Properties.Settings.Default.ExternalEditorTempFile);
         }
 
         private void AttachmentsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -810,8 +809,8 @@ namespace NeoMem2.Gui
 
         private void SaveExternalEditor()
         {
-            DateTime lastWriteTime = File.GetLastWriteTimeUtc(ExternalEditorTempFile);
-            m_CurrentNote.Text = File.ReadAllText(ExternalEditorTempFile);
+            DateTime lastWriteTime = File.GetLastWriteTimeUtc(Properties.Settings.Default.ExternalEditorTempFile);
+            m_CurrentNote.Text = File.ReadAllText(Properties.Settings.Default.ExternalEditorTempFile);
             m_ExternalEditorLastWriteTime = lastWriteTime;
         }
 
@@ -1329,7 +1328,7 @@ namespace NeoMem2.Gui
 
         private bool IsExternalEditorFileDirty()
         {
-            DateTime lastWriteTime = File.GetLastWriteTimeUtc(ExternalEditorTempFile);
+            DateTime lastWriteTime = File.GetLastWriteTimeUtc(Properties.Settings.Default.ExternalEditorTempFile);
             return lastWriteTime > m_ExternalEditorLastWriteTime;
         }
 

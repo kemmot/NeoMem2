@@ -238,5 +238,17 @@ namespace NeoMem2.Gui.Properties {
                 this["StructuredNoteNameDelimiter"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\temp\\neoMem2ExternalNote.md")]
+        public string ExternalEditorTempFile {
+            get {
+                return ((string)(this["ExternalEditorTempFile"]));
+            }
+            set {
+                this["ExternalEditorTempFile"] = value;
+            }
+        }
     }
 }
